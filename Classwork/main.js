@@ -177,13 +177,13 @@
 // const road = prompt('Колір світлофора', '');
 //
 // switch (road) {
-//             case 'зелений':
+//             case 'зелений' && 'green':
 //         alert('Шуруй');
 //         break;
-//     case 'жовтий':
+//     case 'жовтий' && 'yellow':
 //         alert('Почекай');
 //         break;
-//     case 'червоний':
+//     case 'червоний' && 'red':
 //         alert('Стоп');
 //         break;
 //     default:
