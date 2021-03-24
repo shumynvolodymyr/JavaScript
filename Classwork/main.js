@@ -206,15 +206,15 @@ let isRoadClear = confirm('Чи їде машина (yes or no)');
 
 if (color === 'green' && isRoadClear === false) {
     alert('Йди');
-} else if (isRoadClear === true) {
+} else if (color === 'green' && isRoadClear === true) {
     alert('Почекай нехай хуліган проїде');
+} else if (color === 'yellow' && isRoadClear === false) {
+    alert('Ще зашвидко почекай');
 } else if (color === 'yellow' && isRoadClear === true) {
     alert('Почекай');
-} else if (isRoadClear === false) {
-    alert('Ще зашвидко почекай');
 } else if (color === 'red' && isRoadClear === false) {
     alert('Стій ще швидко');
-} else if (isRoadClear === true) {
+} else if (color === 'red' && isRoadClear === true) {
     alert('Стій і чекай');
 } else {
     alert('Роби як знаєш!');
