@@ -47,7 +47,7 @@
 // let height = 23;
 // let width = 10;
 //
-// let s = (width + height);
+// let s = (width * height);
 // console.log(s);
 
 // 5.  Напиши код, который находит объем цилиндра высотой 10м (переменная heightC) и диаметром основания 4м (dC),
