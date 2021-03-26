@@ -12,16 +12,21 @@
 // console.log(boolean);
 
 // -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
-
+//
 // let array = [];
 //
-// array.push('hello', true, false, 'OK', 123);
+// array[0] = 'hello';
+// array[1] = true;
+// array[2] = false;
+// array[3] = 'OK';
+// array[4] = 123;
+//
 // console.log(array);
 
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
 
 // for (let i = 0; i < 10; i++) {
-//     document.write(`<div> Hello </div>`);
+//     document.write(`<div> Hello </div><br>`);
 // }
 
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
@@ -34,7 +39,7 @@
 //
 // let i = 0;
 // while (i<20) {
-//     document.write(`<h1> Text </h1>`);
+//     document.write(`<h1> Text </h1><hr>`);
 //     i++;
 // }
 
@@ -42,7 +47,7 @@
 
 // let i = 0;
 // while (i<20) {
-//     document.write(`<h1> ${i} C довільним текстом </h1>`);
+//     document.write(`<h1> ${i} З довільним текстом </h1>`);
 //     i++;
 // }
 
@@ -73,21 +78,12 @@
 // }
 
 // Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
-
+//
 // let array = ['hai', false, 'ahoj', 10, 'Nazdar', true, 'Andrew', 20, 'Ukr', 'COM'];
 
 // for (let i = 0; i < array.length; i++){
 //     if (typeof array[i] === 'boolean') {
 //         console.log(array[i]);
-//     }
-// }
-
-// Нажаль нерозумію чому непрацює методом вайл як нижче?
-// let i = 0;
-// while (i < array.length) {
-//     if (typeof array[i] === 'boolean') {
-//         document.write(array[i]);
-//         i++;
 //     }
 // }
 
@@ -110,4 +106,106 @@
 //         console.log(array[i]);
 //     }
 // }
+
+// Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+
+// let array = [];
+//
+// array[0] = 'hello';
+// array[1] = 123;
+// array[2] = false;
+// array[3] = 'OK';
+// array[4] = 777;
+// array[5] = 'Nazdar';
+// array[6] = 'true';
+// array[7] = true;
+// array[8] = 'Ahoj';
+// array[9] = 333;
+//
+// for (let i = 0; i < array.length; i++) {
+//     console.log(array[i]);
+// }
+
+// Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+
+// for (let i = 0 ; i < 10; i++) {
+//     console.log(i);
+// document.write(i);
+// document.write(`<br>`);
+// }
+
+// Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+
+// let i = 0;
+// while (i < 100) {
+//     console.log(i);
+//     document.write(i + `<br>`);
+//     i++;
+// }
+
+// Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+//
+// for (let i = 0; i < 100; i+=2) {
+//     console.log(i);
+//     document.write(i + `<br>`);
+// }
+
+// Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+
+// for (let i = 0; i < 100; i++) {
+//     if (i % 2 === 0) {
+//         document.write(i + `<br>`);
+//         console.log(i);
+//     }
+// }
+
+// Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+
+// i = 0;
+//
+// while (i < 100) {
+//     console.log(i);
+//     document.write(i + `<br>`);
+//     i+= 2;
+// }
+
+// Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+
+// for (let i = 0; i< 100; i++) {
+//     if (i % 2 ===1) {
+//         document.write(i + `<br>`);
+//         console.log(i);
+//     }
+// }
+
+// Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
+
+// for (let min = 0; min < 60; min++) {
+//     for (let sec = 0; sec < 60; sec++) {
+//         console.log(min + `:` + sec);
+//         if (min === 2 && sec === 0) {
+//             min = 60;
+// sec = 60;
+//             break;
+//         }
+//     }
+// }
+
+// Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
+
+// for (let hour =0; hour < 12 ; hour++) {
+//     for (let min = 0; min < 60; min++) {
+//         for (let sec = 0; sec < 60; sec++) {
+//             console.log(hour + `:` + min + `:` + sec);
+//             if (hour === 2 && min === 20 && sec === 0) {
+//                 hour = 12;
+//                 min = 60;
+//                 sec = 60;
+//                 break;
+//             }
+//         }
+//     }
+// }
+
+
 
