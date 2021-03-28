@@ -253,5 +253,4 @@
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
 
-let array = [];
 
