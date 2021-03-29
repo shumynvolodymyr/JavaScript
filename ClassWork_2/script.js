@@ -3,7 +3,7 @@
 // let arr = ['a', 'b', 'c'];
 // let num = [1, 2, 3];
 //
-// for (let i = 0; i < num.length; i++) {
+// for (let i = 0; i < 3; i++) {
 //     arr.push(num [i]);
 // }
 //   console.log(arr);
@@ -255,15 +255,15 @@
 
 // a-b:
 
-// let i = [];
-//
-// for (let i=0; i <= 100; i++) {
-//     if (i % 2 === 0) {
-//         console.log(`парні: ${i}`);
-//     } else if (i % 2 === 1) {
-//         console.log(`непарні: ${i}`)
-//     }
-// }
+let i = [];
+
+for (let i=0; i <= 100; i++) {
+    if (i % 2 === 0) {
+        console.log(`парні: ${i}`);
+    } else if (i % 2 === 1) {
+        console.log(`непарні: ${i}`)
+    }
+}
 
 // c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
 
@@ -346,11 +346,11 @@
 
 // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
 
-let arr = [1, false, 13, 'Rap', true, 'OWU', 26, 19];
-let array = [];
-for (i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === 'number') {
-        array.push(arr[i]);
-    }
-}
-console.log(array);
+// let arr = [1, false, 13, 'Rap', true, 'OWU', 26, 19];
+// let array = [];
+// for (i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === 'number') {
+//         array.push(arr[i]);
+//     }
+// }
+// console.log(array);
