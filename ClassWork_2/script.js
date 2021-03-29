@@ -5,8 +5,8 @@
 //
 // for (let i = 0; i < num.length; i++) {
 //     arr.push(num [i]);
-//     console.log(arr);
 // }
+//   console.log(arr);
 
 // Дан масив [1, 2, 3]. Зробіть з нього новий масив [3, 2, 1].
 
@@ -253,4 +253,104 @@
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
 
+// a-b:
 
+// let i = [];
+//
+// for (let i=0; i <= 100; i++) {
+//     if (i % 2 === 0) {
+//         console.log(`парні: ${i}`);
+//     } else if (i % 2 === 1) {
+//         console.log(`непарні: ${i}`)
+//     }
+// }
+
+// c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
+
+// let arr = [];
+// for (let i=0; i < 20; i++) {
+//    arr.push(parseInt(Math.random() * 100));
+// }
+// console.log(arr)
+
+// d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
+
+// let arr = [];
+// for (let i = 0; i < 20; i++) {
+//     arr.push(parseInt(Math.random() * (732 - 8) + 8));
+// }
+// console.log(arr);
+
+// 2. Вивести за допомогою console.log кожен третій елемен
+
+// let arr = [];
+// for (let i = 0; i < 20; i++) {
+//     arr.push(parseInt(Math.random() * (732 - 8) + 8));
+// }
+// for (i=0; i<= arr.length; i+=3) {
+//     console.log(arr[i]);
+// }
+
+//3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+
+// let arr = [];
+// for (let i = 0; i < 20; i++) {
+//     arr.push(parseInt(Math.random() * (732-8) + 8));
+// }
+// for (let i =0; i  <arr.length; i+=3) {
+//     if (arr[i] % 2 === 0) {
+//         console.log(arr[i]);
+//     }
+// }
+
+// 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+
+// let arr = [2,17,13,6,22,31,45,66,100,-18];
+// let res = [];
+// for (let i = 0; i < arr.length; i+=3) {
+//     if (arr[i] % 2 === 0) {
+//         res.push(arr[i]);
+//     }
+// }
+// console.log(res);
+
+// 5. Вивести кожен елемент масиву, сусід справа якого є парним
+// EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
+
+// let arr = [ 1, 2, 3, 5, 7, 9, 56, 8, 67];
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i+1] % 2 === 0){
+//         console.log(arr[i]);
+//     }
+// }
+
+// 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній
+//  чек.
+
+// let arr = [100,250,50,168,120,345,188];
+// let array = 0;
+// for (let i = 0; i< arr.length; i++) {
+//     array += arr[i] / arr.length;
+// }
+// console.log(array);
+
+// 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+
+// let random = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
+// let res = [];
+//
+// for (let i=0; i<random.length; i++) {
+// res.push(random[i] * 5);
+// }
+// console.log(res);
+
+// 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
+
+let arr = [1, false, 13, 'Rap', true, 'OWU', 26, 19];
+let array = [];
+for (i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+        array.push(arr[i]);
+    }
+}
+console.log(array);
