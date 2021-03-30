@@ -3,12 +3,12 @@
 // a) отримує текст з параграфа з id "content"
 
 // let contentIdText = document.getElementById('content');
-// console.log(contentIdText);
+// console.log(contentIdText.innerText);
 
 // b) отримує текст з блоку з id "rules"
 
 // let rulesIdText = document.getElementById('rules');
-// console.log(rulesIdText);
+// console.log(rulesIdText.innerText);
 
 // c) замініть текст параграфа з id 'content' на будь-який інший
 //
@@ -123,17 +123,17 @@ let users = [{
 //
 for (let i =0; i < users.length; i++) {
     let usersDiv = document.createElement('div');
-usersDiv.innerHTML = `Hi. My name is ${users[i].name} <br> I am ${users[i].age} years old <br> My status
-     ${users[i].status}!`;
+    usersDiv.innerHTML =
+        `Hi. My name is ${users[i].name} <br> I am ${users[i].age} years old <br> My status ${users[i].status}!`;
     document.body.appendChild(usersDiv);
 
-    let usersAddreses = document.createElement('div');
+    let usersAddress = document.createElement('div');
     usersAddress.innerHTML = `
     I live in city ${users[i].address.city}. <br> 
     My country- ${users[i].address.country}. <br>
     Street: ${users[i].address.street}. <br>
     My house number ${users[i].address.houseNumber} <hr>`;
-    usersDiv.appendChild(usersAddreses);
+    usersDiv.appendChild(usersAddress);
 }
 
 
