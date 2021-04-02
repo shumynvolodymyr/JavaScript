@@ -102,42 +102,65 @@
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
 
-const users = [
-    {
-        'name': 'Dima',
-        'age': 13,
-        'avto': {
-            'model': 'Camry'
-        }
-    },
-    {
-        'name': 'Vova',
-        'age': 28,
-        'avto': {
-            'model': 'Mercedes-Benz'
-        }
-    },
-    {
-        'name': 'Vasya',
-        'age': 25,
-        'avto': {
-            'model': 'BMW'
-        }
-    },
-    {
-        'name': 'Rulya',
-        'age': 28,
-        'avto': {
-            'model': 'Rover'
-        }
-    }
-]
-
-
+// objectKey([
+//     {
+//         'name': 'Dima',
+//         'age': 13,
+//         'avto': {
+//             'model': 'Camry'
+//         }
+//     },
+//     {
+//         'name': 'Vova',
+//         'age': 28,
+//         'avto': {
+//             'model': 'Mercedes-Benz'
+//         }
+//     },
+//     {
+//         'name': 'Vasya',
+//         'age': 25,
+//         'avto': {
+//             'model': 'BMW'
+//         }
+//     },
+//     {
+//         'name': 'Rulya',
+//         'age': 28,
+//         'avto': {
+//             'model': 'Rover'
+//         }
+//     }
+// ]);
+//
+// function objectKey(array) {
+//     const arr1 = [];
+//     for (const arr of array) {
+//         for (const arrElement in arr) {
+//             arr1.push(arrElement);
+//         }
+//     }
+//     console.log(arr1);
+//     return arr1;
+// }
 
 // 10) Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+
+// arrayValues([{name: 'Dima', age: 13}, {model: 'Camry'}]);
+//
+// function arrayValues(arr) {
+//     let array = [];
+//     for (const arrElement of arr) {
+//         for (const arr in arrElement) {
+//             array.push(arrElement[arr]);
+//         }
+//     }
+//     console.log(array);
+//     return array;
+// }
+
 // 11) створити функцію  яка скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
 //     EXAMPLE:
 // [1,2,3,4]
@@ -145,27 +168,13 @@ const users = [
 // результат
 //     [3,5,7,9]
 
-// ============================================================================================
+// sum([1,2,3,4],[2,3,4,5]);
 //
-// - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
-// - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
-//     Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
-// - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
-//
-// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
-// Двожина масиву від 2 до 100
-// Приклад
-// [1,0,6,0,3] => [1,6,3,0,0]
-// [0,1,2,3,4] => [1,2,3,4,0]
-// [0,0,1,0]   => [1,0,0,0]
-//
-// - Дано список імен.
-// let n1 = '    Harry       Potter      '
-// let n2 = '    Ron       Whisley      '
-// let n3 = '    Hermione       Granger      '
-// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
-// let n1 = 'Harry Potter'
-// let n2 = 'Ron Whisley'
-// let n3 = 'Hermione Granger'
-//
-// ============================================================================================
+// function sum(arrA, arrB) {
+//     let newArray = [];
+//     for (let i = 0; i < arrA.length; i++) {
+//           newArray.push(arrA[i] + arrB[i]);
+//        }
+//     console.log(newArray);
+//     return newArray;
+// }
