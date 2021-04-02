@@ -1,24 +1,51 @@
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
-function anyNumber() {
-    let min = arguments[0];
-    let max = arguments[0];
-    for (let i = 0; i < arguments.length; i++) {
-        if (arguments[i] < min) {
-            min = arguments[i];
-        }
-        if (arguments[i] > max) {
-            max = arguments[i];
-        }
-    }
-    console.log('min:', min);
-    console.log('max:', max);
-    return min;
-}
-anyNumber(1, 2, 5, 7, 0, 7, 4, 7, 9);
+// function anyNumber() {
+//     let min = arguments[0];
+//     let max = arguments[0];
+//     let length = arguments.length;
+//     for (let i = 1; i < length; i++) {
+//         if (arguments[i] < min) min = arguments[i];
+//         if (arguments[i] > max) max = arguments[i];
+//     }
+//     console.log('min:', min);
+//     console.log('max:', max);
+//     return min;
+// }
+// anyNumber(10, 20, 5, 7, -2, 7, 4, 7, 9);
 
 // - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
 //     Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
+
+// keysOrValues([{name: 'Dima', age: 13}, {model: 'Camry'}]);
+//
+// function keysOrValues(mix) {
+//
+//     let array = [];
+//
+//     if (prompt('What exactly do you need: keys or values?') === 'keys') {
+//         for (let i = 0; i < mix.length; i++) {
+//             for (const numbers in mix[i]) {
+//                 array.push(numbers);
+//             }
+//         }
+//         document.write(`<h1>${array}</h1>`);
+//         console.table(array);
+//         return array;
+//     }
+//     if (!!'key') {
+//         for (const arrElement of mix) {
+//             for (const mix in arrElement) {
+//                 array.push(arrElement[mix]);
+//             }
+//         }
+//         document.write(`<h1>${array}</h1>`);
+//         console.table(array);
+//         return array;
+//         }
+// }
+
+
 // - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //   EXAMPLE:
 //   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
