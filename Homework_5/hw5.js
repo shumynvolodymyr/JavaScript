@@ -192,30 +192,25 @@ engine_volume: '3.0D',
 
     increaseMaxSpeed: function (newSpeed) {
         this.max_speed += newSpeed;
+        console.log(this.max_speed);
     },
 
     changeYear: function (newValue) {
         this.year = newValue
+        console.log(this.year);
     },
 
     addDriver: function (driver) {
         this.driver = driver;
+        console.log(this.driver);
     }
 
 }
-
 car.drive();
-
 car.info ();
-
 car.increaseMaxSpeed(100);
-console.log(car.max_speed);
-
 car.changeYear(2021);
-console.log(car.year);
-
 car.addDriver({name: 'Ivan', age: 25});
-console.log(car.driver);
 
 
 
