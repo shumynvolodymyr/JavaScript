@@ -114,10 +114,87 @@
 // --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 // -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
 
-
+// class Popelushka {
+//     constructor(name, age, footSize) {
+//         this.name = name;
+//         this.age = age;
+//         this.footSize = footSize;
+//
+//     }
+// }
+// let popOne = new Popelushka('Karina', 25, 39);
+// let popTwo = new Popelushka('Irina', 26, 38);
+// let popThree = new Popelushka('Darina', 27, 37);
+// let popFour = new Popelushka('Malvina', 28, 36);
+// let popFive = new Popelushka('Vasilina', 29, 42);
+// let popSix = new Popelushka('Masha', 30, 41);
+// let popSeven = new Popelushka('Dasha', 31, 40);
+// let popEight = new Popelushka('Natasha', 32, 43);
+// let popNine = new Popelushka('Tetyana', 33, 35);
+// let popTen = new Popelushka('Svitlana', 34, 36);
+//
+// let divahy = [popOne, popTwo, popThree, popFour, popFive, popSix, popSeven, popEight, popNine, popTen];
+// console.log(divahy);
+//
+// class Princ {
+//     constructor(name, age, slipper) {
+//         this.name = name;
+//         this.age = age;
+//         this.slipper = slipper;
+//     }
+// }
+// let kavaler = new Princ('Edvard',28,37) ;
+// console.log(kavaler);
+//
+// for (let i = 0; i < divahy.length; i++) {
+//     if (kavaler.slipper === divahy[i].footSize){
+//         console.log(`${divahy[i].name} must be with the Edvard`)
+//     }
+// }
 
 
 // -створити функцію конструктор попелюшка з полями ім'я, вік, розмір ноги
 // --Створити 10 попелюшок , покласти їх в масив
 // --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
 // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
+
+function Popelushka(name, age, footSize) {
+    this.name = name;
+    this.age = age;
+    this.footSize = footSize;
+
+}
+
+let popOne = new Popelushka('Karina', 25, 39);
+let popTwo = new Popelushka('Irina', 26, 38);
+let popThree = new Popelushka('Darina', 27, 37);
+let popFour = new Popelushka('Malvina', 28, 36);
+let popFive = new Popelushka('Vasilina', 29, 42);
+let popSix = new Popelushka('Masha', 30, 41);
+let popSeven = new Popelushka('Dasha', 31, 40);
+let popEight = new Popelushka('Natasha', 32, 43);
+let popNine = new Popelushka('Tetyana', 33, 35);
+let popTen = new Popelushka('Svitlana', 34, 36);
+
+let divahy = [popOne, popTwo, popThree, popFour, popFive, popSix, popSeven, popEight, popNine, popTen];
+console.log(divahy);
+
+function Princ(name, age, slipper) {
+    this.name = name;
+    this.age = age;
+    this.slipper = slipper;
+}
+
+let men = new Princ('Ivan', 27,41);
+console.log(men);
+
+function Search() {
+    let length = divahy.length;
+    for (let i = 0; i < length; i++) {
+        if (men.slipper === divahy[i].footSize) {
+            console.log(`${divahy[i].name} - must be with the Edvard`);
+        }
+    }
+
+}
+Search(divahy);
