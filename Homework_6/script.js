@@ -293,31 +293,52 @@ const carOne = {producer:"subaru",volume: 2, owner: {name: 'John', age: 28, driv
 const carTwo = {producer:"bmw",volume: 3, owner: {name: 'Dan', age: 29, drivingExperience: 6}, price : 2500, year: 2014};
 const carThree = {producer:"mercedes",volume: 6.3, owner: {name: 'Ivan', age: 25, drivingExperience: 7}, price : 3000, year: 2013};
 const carFour = {producer:"opel",volume: 1.8, owner: {name: 'Dominik', age: 27, drivingExperience: 8}, price : 1000, year: 2008};
-const carFive = {producer:"lada",volume: 1.6, owner: {name: 'Vlad', age: 24, drivingExperience: 4}, price : 500, year: 2009};
+const carFive = {producer:"lada",volume: 1.6, owner: {name: 'Vlad', age: 26, drivingExperience: 4}, price : 500, year: 2009};
 const carSix = {producer:"lexus",volume: 2.5, owner: {name: 'Andrew', age: 35, drivingExperience: 5}, price : 2800, year: 2012};
 const carSeven = {producer:"fiat",volume: 2, owner: {name: 'Ihor', age: 27, drivingExperience: 7}, price : 4000, year: 2011};
-const carEight = {producer:"renault",volume: 1.9, owner: {name: 'Artem', age: 33, drivingExperience: 9}, price : 1200, year: 2010};
+const carEight = {producer:"renault",volume: 1.9, owner: {name: 'Artem', age: 33, drivingExperience: 3}, price : 1200, year: 2010};
 
 let car = [carOne, carTwo, carThree, carFour, carFive, carSix, carSeven, carEight];
 
 // Зробили половину автопарку ремонт мотору, що збільшить потужність автомобілів на 10% (переприсвоєння змінної потужності).
 // На відремонтовані автомобілі найняти нових водіїв (переприсвоїти змінну водій).
 
-let newOwner = ['Sasha', '', 'Masha', '', 'Natasha', '' ,'Dasha'];
-// тут трішки зколхозив :)) тому що воно мені нових водіїв теж циклом гонить через один (
+let newOwner = ['Sasha','','Masha','', 'Natasha','','Dasha'];
+
+//// тут трішки зколхозив :)) тому що мені нових водіїв теж циклом гонить через один (
+
 for (let i = 0; i < car.length; i+= 2) {
     car[i].volume += car[i].volume * 0.1;
-    car[i].owner = newOwner[i];
+    car[i].owner.name = newOwner[i];
 }
 // console.log(car);
 
 // Для початку вкладіть всі наші створені автомобілі в масив cars.
 
-
+let cars = car.concat();
+//// console.log(cars);
 
 //     Далі необхідно рати кожну другу машинку (цикл з кроком в 2), та робити їй підвищення потужності двигуна на 10% та ціну на 5%
+
+for (let i = 0; i < cars.length; i+=2) {
+    const car1 = cars[i];
+    car1.volume += car[i].volume * 0.1;
+    car1.price += car1.volume * 0.05;
+
+}
+console.log(cars);
+
 // Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25,
 //     то необідно відправити його на курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.
+
+for (let i = 0; i < cars.length; i++) {
+    const car1 = cars[i];
+    if (car1.owner.drivingExperience <5 && car1.owner.age > 25) {
+        car1.owner.drivingExperience +=1;
+    }
+}
+console.log(cars);
+
 //     Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі
 
 
