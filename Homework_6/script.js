@@ -281,7 +281,7 @@
 // console.log(child);
 
 // ______________________________________________________________________________________________________________________________________________________
-// Додатково
+// Додатково --- тільки почав робити)
 // ______________________________________________________________________________________________________________________________________________________
 //
 // Створити обєкт автомобіля з полями:
@@ -296,8 +296,18 @@
 // Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25,
 //     то необідно відправити його на курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.
 //     Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі
-//
-//
+
+const carOne = {producer:"subaru",volume: 2, owner: {name: 'John', age: 28, drivingExperience: 5}, price : 2000, year: 2015};
+const carTwo = {producer:"bmw",volume: 3, owner: {name: 'Dan', age: 29, drivingExperience: 6}, price : 2500, year: 2014};
+const carThree = {producer:"mercedes",volume: 6.3, owner: {name: 'Ivan', age: 25, drivingExperience: 7}, price : 3000, year: 2013};
+const carFour = {producer:"opel",volume: 1.8, owner: {name: 'Dominik', age: 27, drivingExperience: 8}, price : 1000, year: 2008};
+const carFive = {producer:"lada",volume: 1.6, owner: {name: 'Vlad', age: 24, drivingExperience: 4}, price : 500, year: 2009};
+const carSix = {producer:"lexus",volume: 2.5, owner: {name: 'Andrew', age: 35, drivingExperience: 5}, price : 2800, year: 2012};
+const carSeven = {producer:"fiat",volume: 2, owner: {name: 'Ihor', age: 27, drivingExperience: 7}, price : 4000, year: 2011};
+const carEight = {producer:"renault",volume: 1.9, owner: {name: 'Artem', age: 33, drivingExperience: 9}, price : 1200, year: 2010};
+
+
+
 // Задача: дан отсортированный по возрастанию массив целых чисел.
 //     Необходимо вернуть наименьший и наибольший индекс заданного элемента.
 //     Входные данные: arr — массив целых чисел значения которых по модулю не больше 10. Размер массива не более 10 элементов.
