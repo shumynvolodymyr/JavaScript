@@ -305,18 +305,16 @@ const car = [carOne, carTwo, carThree, carFour, carFive, carSix, carSeven, carEi
 
 const newOwner = ['Sasha','','Masha','', 'Natasha','','Dasha'];
 
-//// тут трішки зколхозив :)) тому що мені нових водіїв теж циклом гонить через один ( +
-
 for (let i = 0; i < car.length; i+= 2) {
     car[i].volume += car[i].volume * 0.1;
     car[i].owner.name = newOwner[i];
 }
-console.log(car);
+// console.log(car);
 
 // Для початку вкладіть всі наші створені автомобілі в масив cars.
 
 const cars = car.concat();
-console.log(cars);
+// console.log(cars);
 
 //     Далі необхідно рати кожну другу машинку (цикл з кроком в 2), та робити їй підвищення потужності двигуна на 10% та ціну на 5%
 
@@ -326,7 +324,7 @@ for (let i = 0; i < cars.length; i+=2) {
     car1.price += car1.price * 0.05;
 
 }
-console.log(cars);
+// console.log(cars);
 
 // Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25,
 //     то необідно відправити його на курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.
@@ -337,7 +335,7 @@ for (let i = 0; i < cars.length; i++) {
         car1.owner.drivingExperience +=1;
     }
 }
-console.log(cars);
+// console.log(cars);
 
 //     Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі
 
@@ -346,7 +344,7 @@ let zero = 0;
 for (let i = 0; i < cars.length; i++) {
   zero += cars[i].price;
 }
-console.log(zero);
+// console.log(zero);
 
 // Задача: дан отсортированный по возрастанию массив целых чисел.
 //     Необходимо вернуть наименьший и наибольший индекс заданного элемента.
@@ -368,4 +366,4 @@ function minAndMaxIndex(element) {
     console.log(`Answer: MinIndex = ${min}, MaxIndex = ${max}`)
 }
 
-minAndMaxIndex(3);
+minAndMaxIndex(4);
