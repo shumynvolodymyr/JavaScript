@@ -298,32 +298,32 @@ const carSix = {producer:"lexus",volume: 2.5, owner: {name: 'Andrew', age: 35, d
 const carSeven = {producer:"fiat",volume: 2, owner: {name: 'Ihor', age: 27, drivingExperience: 7}, price : 4000, year: 2011};
 const carEight = {producer:"renault",volume: 1.9, owner: {name: 'Artem', age: 33, drivingExperience: 3}, price : 1200, year: 2010};
 
-let car = [carOne, carTwo, carThree, carFour, carFive, carSix, carSeven, carEight];
+const car = [carOne, carTwo, carThree, carFour, carFive, carSix, carSeven, carEight];
 
 // Зробили половину автопарку ремонт мотору, що збільшить потужність автомобілів на 10% (переприсвоєння змінної потужності).
 // На відремонтовані автомобілі найняти нових водіїв (переприсвоїти змінну водій).
 
-let newOwner = ['Sasha','','Masha','', 'Natasha','','Dasha'];
+const newOwner = ['Sasha','','Masha','', 'Natasha','','Dasha'];
 
-//// тут трішки зколхозив :)) тому що мені нових водіїв теж циклом гонить через один (
+//// тут трішки зколхозив :)) тому що мені нових водіїв теж циклом гонить через один ( +
 
 for (let i = 0; i < car.length; i+= 2) {
     car[i].volume += car[i].volume * 0.1;
     car[i].owner.name = newOwner[i];
 }
-// console.log(car);
+console.log(car);
 
 // Для початку вкладіть всі наші створені автомобілі в масив cars.
 
-let cars = car.concat();
-//// console.log(cars);
+const cars = car.concat();
+console.log(cars);
 
 //     Далі необхідно рати кожну другу машинку (цикл з кроком в 2), та робити їй підвищення потужності двигуна на 10% та ціну на 5%
 
 for (let i = 0; i < cars.length; i+=2) {
     const car1 = cars[i];
     car1.volume += car[i].volume * 0.1;
-    car1.price += car1.volume * 0.05;
+    car1.price += car1.price * 0.05;
 
 }
 console.log(cars);
@@ -341,6 +341,12 @@ console.log(cars);
 
 //     Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі
 
+let zero = 0;
+
+for (let i = 0; i < cars.length; i++) {
+  zero += cars[i].price;
+}
+console.log(zero);
 
 // Задача: дан отсортированный по возрастанию массив целых чисел.
 //     Необходимо вернуть наименьший и наибольший индекс заданного элемента.
@@ -353,3 +359,13 @@ console.log(cars);
 // Answer: MinIndex = 0, MaxIndex = 0.
 // 2. Key = 4
 // Answer: MinIndex = 3, MaxIndex = 6.
+
+const arr = [1, 2, 3, 4, 4, 4, 4, 7, 7, 9, 14];
+
+function minAndMaxIndex(element) {
+    let min = arr.indexOf(element);
+    let max = arr.lastIndexOf(element);
+    console.log(`Answer: MinIndex = ${min}, MaxIndex = ${max}`)
+}
+
+minAndMaxIndex(3);
