@@ -2,7 +2,7 @@
 
 let crimsonDiv = document.getElementById('text');
 let divButton = document.getElementById('divButton');
-divButton.onclick = event => crimsonDiv.hidden = true;
+divButton.onclick = event => {crimsonDiv.hidden = !crimsonDiv.hidden};
 
 //     - Створіть кнопку, при кліку на яку, вона буде приховувати сама себе.
 
@@ -15,7 +15,9 @@ divButtonTwo.onclick = event => divButtonTwo.hidden = true;
 let inputAge = document.getElementById('input');
 let buttonAge = document.getElementById('button');
 
-buttonAge.onclick = (ev) => inputAge.value > 18 ? alert('18+') : alert(`Вік менше ніж 18`);
+buttonAge.onclick = ev => {
+    console.log(inputAge.value);
+    inputAge.value > 18 ? alert('18+') : alert(`Вік менше ніж 18`)};
 
 
 // - Створіть меню, яке розгортається/згортається при клику
@@ -30,12 +32,44 @@ menuName.onclick = (e) => {
     menu.style.display === 'block'
     ?menu.style.display = 'none'
     :menu.style.display = 'block'
-
 }
 
 // - Створіть список коментарів , приклад об'єкту коментаря - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 // Вивести список коментарів в документ, кожний в своєму блоці.
 //     Додайте кожному коментарю по кнопці для згортання його body.
+
+const commentsList = [
+    {title : 'lorem1', body:'lorem ipsum dolo sit ameti1'},
+    {title : 'lorem2', body:'lorem ipsum dolo sit ameti2'},
+    {title : 'lorem3', body:'lorem ipsum dolo sit ameti3'},
+    {title : 'lorem4', body:'lorem ipsum dolo sit ameti4'},
+    {title : 'lorem5', body:'lorem ipsum dolo sit ameti5'},
+    {title : 'lorem6', body:'lorem ipsum dolo sit ameti6'},
+]
+
+const list = document.getElementById('list');
+commentsList.forEach(ev => {
+    const div = document.createElement('div');
+    const title = document.createElement('h1');
+    const body = document.createElement('p');
+    const button = document.createElement('button');
+    button.innerText = 'DEL';
+
+    button.onclick = () => {
+        body.style.display= 'none';
+    }
+
+    title.innerHTML = ev.title;
+    body.innerHTML = ev.body;
+
+    div.appendChild(title);
+    div.appendChild(body);
+    list.appendChild(div);
+    body.appendChild(button);
+
+})
+
+
 // - Створити 2 форми  по 2 інпути в кожній. створити кнопку при кліку на яку зчитується та виводиться на консоль інформація з цих 2х форм.
 //     Кнопка повинна лежати за межами форм (Щоб уникнути  перезавантаження сторінки)
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
