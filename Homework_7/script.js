@@ -86,9 +86,36 @@
 //     Перший аргумент визначає кількість строк.
 //     Другий параметр визначає кількість ячейок в кожній строці.
 //     Третій параметр визначає елемент в який потрібно таблицю додати.
+
+// const generation = (genTr, genTd, element) => {
+// const table = document.createElement('table');
+//     for (let i = 0; i < genTr; i++) {
+//         const teerka = document.createElement('tr');
+//         table.appendChild(teerka);
+//
+//         for (let j = 0; j < genTd; j++) {
+//             const tedeshka = document.createElement('tr');
+//             teerka.appendChild(tedeshka);
+//             tedeshka.innerText = 'two';
+//         }
+//     }
+// let elmnt = document.createElement(element);
+//     elmnt.appendChild(table);
+//     document.body.append(elmnt);
+//
+// }
+// generation(4,4,'one')
+
 // - Напишіть «Карусель» – стрічку зображень, яку можна гортати вліво-вправо нажаттям на стрілочки.
-//
-//
+
+let prew = document.getElementsByClassName('prew');
+let next = document.getElementsByClassName('next');
+
+prew.onclick = () =>{
+
+}
+
+
 //     ______________________________________________________________________________________________________________________________________________________
 // РОБОТА В АУДИТОРІЇ
 // ______________________________________________________________________________________________________________________________________________________
