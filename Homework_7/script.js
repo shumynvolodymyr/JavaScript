@@ -1,86 +1,86 @@
 // - Створити довільний елемент с id = text. використовуючи JavaScript, зробіть так, щоб при кліку на кнопку зникавл елемент с id="text".
 //
-// let crimsonDiv = document.getElementById('text');
-// let divButton = document.getElementById('divButton');
-// divButton.onclick = event => {crimsonDiv.hidden = !crimsonDiv.hidden};
+let crimsonDiv = document.getElementById('text');
+let divButton = document.getElementById('divButton');
+divButton.onclick = event => {crimsonDiv.hidden = !crimsonDiv.hidden};
 
 //     - Створіть кнопку, при кліку на яку, вона буде приховувати сама себе.
 //
-// let divButtonTwo = document.getElementById('divButtonTwo');
-// divButtonTwo.onclick = event => divButtonTwo.hidden = true;
+let divButtonTwo = document.getElementById('divButtonTwo');
+divButtonTwo.onclick = event => divButtonTwo.hidden = true;
 
 // - Створити інпут який приймає вік людини та кнопку яка підтверджує дію.
 //     При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи менше він ніж 18, та повідомити про це користувача
 
-// let inputAge = document.getElementById('input');
-// let buttonAge = document.getElementById('button');
-//
-// buttonAge.onclick = ev => {
-//     console.log(inputAge.value);
-//     inputAge.value > 18 ? alert('18+') : alert(`Вік менше ніж 18`)};
+let inputAge = document.getElementById('input');
+let buttonAge = document.getElementById('button');
+
+buttonAge.onclick = ev => {
+    console.log(inputAge.value);
+    inputAge.value > 18 ? alert('18+') : alert(`Вік менше ніж 18`)};
 //
 //
 // // - Створіть меню, яке розгортається/згортається при клику
 //
-// const menuName = document.getElementById('menuName');
-// const menu = document.getElementById('menu');
-//
-// menu.style.display = 'block';
-// menuName.style.backgroundColor = 'crimson';
-//
-// menuName.onclick = (e) => {
-//     menu.style.display === 'block'
-//     ?menu.style.display = 'none'
-//     :menu.style.display = 'block'
-// }
+const menuName = document.getElementById('menuName');
+const menu = document.getElementById('menu');
+
+menu.style.display = 'block';
+menuName.style.backgroundColor = 'crimson';
+
+menuName.onclick = (e) => {
+    menu.style.display === 'block'
+    ?menu.style.display = 'none'
+    :menu.style.display = 'block'
+}
 
 // - Створіть список коментарів , приклад об'єкту коментаря - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 // Вивести список коментарів в документ, кожний в своєму блоці.
 //     Додайте кожному коментарю по кнопці для згортання його body.
 
-// const commentsList = [
-//     {title : 'lorem1', body:'lorem ipsum dolo sit ameti1'},
-//     {title : 'lorem2', body:'lorem ipsum dolo sit ameti2'},
-//     {title : 'lorem3', body:'lorem ipsum dolo sit ameti3'},
-//     {title : 'lorem4', body:'lorem ipsum dolo sit ameti4'},
-//     {title : 'lorem5', body:'lorem ipsum dolo sit ameti5'},
-//     {title : 'lorem6', body:'lorem ipsum dolo sit ameti6'},
-// ]
-//
-// const list = document.getElementById('list');
-// commentsList.forEach(ev => {
-//     const div = document.createElement('div');
-//     const title = document.createElement('h1');
-//     const body = document.createElement('p');
-//     const button = document.createElement('button');
-//     button.innerText = 'DEL';
-//
-//     button.onclick = () => {
-//         body.hidden = ! body.hidden;
-//     }
-//
-//     title.innerHTML = ev.title;
-//     body.innerHTML = ev.body;
-//
-//     list.appendChild(div);
-//     div.appendChild(title);
-//     div.appendChild(body);
-//     div.appendChild(button);
-//
-// })
+const commentsList = [
+    {title : 'lorem1', body:'lorem ipsum dolo sit ameti1'},
+    {title : 'lorem2', body:'lorem ipsum dolo sit ameti2'},
+    {title : 'lorem3', body:'lorem ipsum dolo sit ameti3'},
+    {title : 'lorem4', body:'lorem ipsum dolo sit ameti4'},
+    {title : 'lorem5', body:'lorem ipsum dolo sit ameti5'},
+    {title : 'lorem6', body:'lorem ipsum dolo sit ameti6'},
+]
+
+const list = document.getElementById('list');
+commentsList.forEach(ev => {
+    const div = document.createElement('div');
+    const title = document.createElement('h1');
+    const body = document.createElement('p');
+    const button = document.createElement('button');
+    button.innerText = 'DEL';
+
+    button.onclick = () => {
+        body.hidden = ! body.hidden;
+    }
+
+    title.innerHTML = ev.title;
+    body.innerHTML = ev.body;
+
+    list.appendChild(div);
+    div.appendChild(title);
+    div.appendChild(body);
+    div.appendChild(button);
+
+})
 
 // - Створити 2 форми  по 2 інпути в кожній. створити кнопку при кліку на яку зчитується та виводиться на консоль інформація з цих 2х форм.
 //     Кнопка повинна лежати за межами форм (Щоб уникнути  перезавантаження сторінки)
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
 
-// const but = document.getElementById('but');
-// but.onclick = ev => {
-//     for (const item of document.forms) {
-//         for (const form of item) {
-//             console.log(form.value);
-//         }
-//     }
-// }
+const btn = document.getElementById('btn');
+btn.onclick = ev => {
+    for (const item of document.forms) {
+        for (const form of item) {
+            console.log(form.value);
+        }
+    }
+}
 
 // - Створити функцію, яка генерує таблицю.
 //     Перший аргумент визначає кількість строк.
@@ -91,58 +91,57 @@
 // const table = document.createElement('table');
 //     for (let i = 0; i < genTr; i++) {
 //         const teerka = document.createElement('tr');
-//         table.appendChild(teerka);
-//
 //         for (let j = 0; j < genTd; j++) {
-//             const tedeshka = document.createElement('tr');
+//             const tedeshka = document.createElement('td');
 //             teerka.appendChild(tedeshka);
 //             tedeshka.innerText = 'two';
 //         }
+//         table.appendChild(teerka);
 //     }
 // let elmnt = document.createElement(element);
 //     elmnt.appendChild(table);
-//     document.body.append(elmnt);
+//     document.body.appendChild(elmnt);
 //
 // }
-// generation(4,4,'one')
+// generation(5,3,'one')
 
 // - Напишіть «Карусель» – стрічку зображень, яку можна гортати вліво-вправо нажаттям на стрілочки.
 
-// let imgArr = [
-//     {id: 1, imgURL: 'img/img1.jpg'},
-//     {id: 2, imgURL: 'img/img2.jpg'},
-//     {id: 3, imgURL: 'img/img3.jpg'},
-//     {id: 4, imgURL: 'img/img4.jpg'},
-//     {id: 5, imgURL: 'img/img5.jpg'},
-// ];
-//
-// const carousel = document.getElementById('corousel');
-// const image = document.createElement('img');
-// const butLeft = document.createElement('button');
-// const butRight = document.createElement('button');
-// carousel.appendChild(image);
-// carousel.appendChild(butLeft);
-// carousel.appendChild(butRight);
-// butLeft.innerText = '⇦';
-// butRight.innerText = '⇨';
-//
-// let index = 0;
-// image.width = 250;
-// image.src = imgArr[index].imgURL;
-//
-// butLeft.onclick = () => {
-//     index - 1 < 0
-//         ? index=imgArr.length - 1
-//         : index -= 1
-//     image.src = imgArr[index].imgURL;
-// }
-//
-// butRight.onclick = () => {
-//     index + 1 > imgArr.length - 1
-//         ? index = 0
-//         : index+=1
-//     image.src = imgArr[index].imgURL;
-// }
+let imgArr = [
+    {id: 1, imgURL: 'img/img1.jpg'},
+    {id: 2, imgURL: 'img/img2.jpg'},
+    {id: 3, imgURL: 'img/img3.jpg'},
+    {id: 4, imgURL: 'img/img4.jpg'},
+    {id: 5, imgURL: 'img/img5.jpg'},
+];
+
+const carousel = document.getElementById('corousel');
+const image = document.createElement('img');
+const butLeft = document.createElement('button');
+const butRight = document.createElement('button');
+carousel.appendChild(image);
+carousel.appendChild(butLeft);
+carousel.appendChild(butRight);
+butLeft.innerText = '⇦';
+butRight.innerText = '⇨';
+
+let index = 0;
+image.width = 250;
+image.src = imgArr[index].imgURL;
+
+butLeft.onclick = () => {
+    index - 1 < 0
+        ? index=imgArr.length - 1
+        : index -= 1
+    image.src = imgArr[index].imgURL;
+}
+
+butRight.onclick = () => {
+    index + 1 > imgArr.length - 1
+        ? index = 0
+        : index+=1
+    image.src = imgArr[index].imgURL;
+}
 
 //     ______________________________________________________________________________________________________________________________________________________
 // РОБОТА В АУДИТОРІЇ
@@ -154,15 +153,15 @@
 //     Якщо людина вводить слово і воно міститься в масиві нецензурних слів кинути алерт з попередженням.
 //     Перевірку робити при натисканні на кнопку
 
-// const input = document.getElementById('maty');
-// const button = document.getElementById('butMat');
-// let xxx = ['fak', 'durik', 'debil', 'false'];
-//
-// button.onclick = () => {
-//     for (const slovo of xxx) {
-//         if (input.value === slovo) alert('Нізя так!');
-//     }
-// }
+const input = document.getElementById('maty');
+const button = document.getElementById('butMat');
+let xxx = ['fak', 'durik', 'debil', 'false'];
+
+button.onclick = () => {
+    for (const slovo of xxx) {
+        if (input.value === slovo) alert('Нізя так!');
+    }
+}
 
 // - Сворити масив нецензцрних слів.
 //     Сворити інпут текстового типу.
@@ -170,15 +169,15 @@
 //     Кинути алерт з попередженням у випадку якщо містить.
 //     Перевірку робити при натисканні на кнопку
 
-// const input = document.getElementById('maty');
-// const button = document.getElementById('butMat');
-// let xxx = ['fak', 'durik', 'debil', 'false'];
-//
-// button.onclick = () => {
-//     for (const slovo of xxx) {
-//         if (input.value.includes(slovo)) alert(`Нізя ${slovo}!`);
-//     }
-// }
+//const input = document.getElementById('maty');
+//const button = document.getElementById('butMat');
+//let xxx = ['fak', 'durik', 'debil', 'false'];
+
+button.onclick = () => {
+    for (const slovo of xxx) {
+        if (input.value.includes(slovo)) alert(`Нізя ${slovo}!`);
+    }
+}
 
 // -- Створити скрипт, котрий бере зчитує на сторінці (rules.html) текст і робить збоку меню-зміст по всіх заголовках які є в тексті.
 //     При кліку на пункт заголовку ви маєт відправлятись  до цього пункту в тексту
@@ -230,6 +229,22 @@ const chek1 = document.getElementById('chek1');
 const chek2 = document.getElementById('chek2');
 const chek3 = document.getElementById('chek3');
 const but = document.getElementById('but');
+const filter = document.getElementById('filter');
 
-
-
+but.onclick = () => {
+    let res = JSON.parse(JSON.stringify(usersWithAddress));
+        if (chek1.checked) {
+            res = res.filter(value => !value.isMarried)
+        }
+        if (chek2.checked) {
+            res =res.filter(value => value.age >= 29)
+        }
+        if (chek3.checked) {
+            res =res.filter(value => value.address.city === 'Kyiv')
+        }
+    for (let user of res) {
+        let userDiv = document.createElement('div');
+        userDiv.innerText = JSON.stringify(user);
+        filter.appendChild(userDiv);
+    }
+}
