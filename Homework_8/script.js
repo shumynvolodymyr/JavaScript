@@ -15,37 +15,31 @@
 // Сделайте так, чтобы при следующем заходе на страницу введенные им ранее данные стояли на своих местах.
 //     Сделайте ваш скрипт как можно более универсальным.
 
-let text = document.getElementById('text');
-let textarea = document.getElementById('textarea');
-let checkbox = document.getElementById('checkbox');
-let radio = document.getElementById('radio');
-let select = document.getElementById('select');
 
-text.oninput = () => {
-    localStorage.setItem('text',text.value);
-}
-text.value = localStorage.getItem('text');
+let forma = document.getElementById('form');
 
-textarea.oninput = () => {
-    localStorage.setItem('textarea',textarea.value);
-}
-textarea.value = localStorage.getItem('textarea');
-
-checkbox.onclick = () => {
-    localStorage.setItem('checkbox',checkbox.checked);
-}
-checkbox.checked = JSON.parse(localStorage.getItem('checkbox'));
-
-radio.onclick = () => {
-    localStorage.setItem('radio',radio.checked);
+for (let i = 0; i < forma.length; i++) {
+    forma[i].oninput = () => {
+        localStorage.setItem(forma[i].id, forma[i].value);
     }
-radio.checked = JSON.parse(localStorage.getItem('radio'));
-
-select.oninput = () => {
-    localStorage.setItem('select',select.value);
+    forma[i].value = localStorage.getItem(forma[i].id);
 }
-select.value = localStorage.getItem('select');
 
+
+function saveData(data) {
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].type === 'checkbox' || data[i].type === 'radio') {
+            data[i].onclick = () => {
+                data[i].checked ? data[i].value = true : data[i].value = false;
+                localStorage.setItem(data[i].id, data[i].checked);
+            }
+            data[i].checked = JSON.parse(localStorage.getItem(data[i].id));
+
+        }
+    }
+
+}
+saveData(forma);
 
 // -Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище), затем поредактировать их, затем еще поредактировать и возможно еще.....
 // Требование : хранить историю своих изменений (даже после перезагрузки страницы).
@@ -56,6 +50,5 @@ select.value = localStorage.getItem('select');
 // Данные вводить через соответсвующую форму.
 // --Каждому контакту добавить кнопку для удаления контакта.
 // --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта
-
 
 

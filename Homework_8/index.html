@@ -9,16 +9,20 @@
 <!--<textarea id="textarea1" rows="10" cols="45"></textarea>-->
 <!--<button id="but">SAVE</button>-->
 
-<form action="" id="forma">
-    <input type="text" id="text">
-    <textarea id="textarea"></textarea>
-    <input type="checkbox" id="checkbox">
-    <input type="radio" name="rad" id="radio">
-    <select name="select" id="select">
-        <option value="one">one</option>
-        <option value="two">two</option>
-    </select>
+<form name="form" id="form">
+    <label><input type="text" name="text" id="text"></label> <br><br>
+    <label><textarea rows="5" cols="22" name="textarea" id="textarea"></textarea></label> <br>
+    <label>You married? <input type="checkbox" name="checkbox" id="checkbox"></label> <br>
+    <label> <input type="radio" name="rad" id="radio1" value='false'></label> Men
+    <label><input type="radio" name="rad" id="radio2" value='false'></label> Women <br>
+    К-сть дітей:
+    <label><select name="select" id="select">
+        <option>one</option>
+        <option>two</option>
+        <option>other</option>
+    </select></label>
 </form>
+
 
 <script src="script.js"></script>
 </body>
